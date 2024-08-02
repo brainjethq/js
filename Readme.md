@@ -1277,3 +1277,62 @@ This function demonstrates:
 
 --- 
 
+# Functions Calling Other Functions
+
+Let's delve into the concept of functions calling other functions in JavaScript, drawing from the reference text and providing illustrative examples.
+
+**The Power of Composition**
+
+The reference text highlights that JavaScript's ability to treat functions as values empowers you to create functions that can accept other functions as arguments and even return new functions. This capability unlocks the power of **function composition**, where you combine simple functions to build more complex functionalities.
+
+**Example from the Reference Text**
+
+The text presents the following code snippet to demonstrate function composition:
+
+JavaScript
+
+```
+// We define some simple functions here
+function add(x, y) {
+  return x + y;
+}
+function subtract(x, y) {
+  return x - y;
+}
+function multiply(x, y) {
+  return x * y;
+}
+function divide(x, y) {
+  return x / y;
+}
+
+// Here's a function that takes one of the preceding functions
+// as an argument and invokes it on two operands
+function operate(operator, operand1, operand2) {
+  return operator(operand1, operand2);
+}
+
+// We could invoke this function like this to compute the value (2+3) + (4*5):
+let i = operate(add, operate(add, 2, 3), operate(multiply, 4, 5));
+
+```
+
+In this example:
+
+1.  We define basic arithmetic functions:  `add`,  `subtract`,  `multiply`, and `divide`.
+2.  We create a higher-order function `operate` that accepts an operator function and two operands as arguments.
+3.  The `operate` function then calls the provided operator function with the given operands and returns the result.
+4.  Finally, we use `operate` to compose a complex calculation:  `(2 + 3) + (4 * 5)`.
+
+**Explanation**
+
+-   The `operate` function acts as a versatile tool for applying different operations based on the function passed to it.
+-   By nesting `operate` calls, we can build intricate calculations from simpler functions, showcasing the essence of function composition.
+
+**Key Advantages**
+
+-   **Modularity:** Function composition promotes modular code by breaking down complex tasks into smaller, reusable functions.
+-   **Readability:** It can lead to more readable code by expressing computations in a clear and structured manner.
+-   **Flexibility:** This approach allows you to dynamically change the behavior of your code by passing different functions as arguments.
+
+--- 
