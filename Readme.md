@@ -1181,3 +1181,99 @@ The reference text strongly recommends using strict mode for all new JavaScript 
 
 --- 
 
+# Functions
+
+Let's explore the concept of functions in JavaScript, drawing from the reference text and providing illustrative examples.
+
+**What are Functions?**
+
+In JavaScript, functions are self-contained blocks of code that encapsulate a specific task or computation. They are reusable, meaning you can define them once and execute them multiple times with different inputs. The reference text highlights that functions are not only syntactic constructs but also first-class objects, allowing them to be treated as data within your programs.
+
+**Defining Functions**
+
+The text outlines three primary ways to define functions in JavaScript:
+
+1.  **Function Declarations**
+    
+    -   Use the `function` keyword followed by the function name, a parameter list in parentheses, and the function body enclosed in curly braces.
+    -   Example:
+    
+    JavaScript
+    
+    ```
+    function greet(name) {
+        console.log("Hello, " + name + "!");
+    }
+    
+    ```
+    
+2.  **Function Expressions**
+    
+    -   Assign an anonymous function (without a name) to a variable or constant.
+    -   Example:
+    
+    JavaScript
+    
+    ```
+    const square = function(x) { return x * x; };
+    
+    ```
+    
+3.  **Arrow Functions (ES6 and later)**
+    
+    -   Provide a concise syntax using the `=>` arrow to separate parameters from the function body.
+    -   Example:
+    
+    JavaScript
+    
+    ```
+    const add = (x, y) => x + y;
+    
+    ```
+    
+
+**Invoking Functions**
+
+Functions are executed, or invoked, using parentheses after the function name or the variable/constant to which the function is assigned. You can pass arguments within the parentheses, which are then assigned to the function's parameters.
+
+-   Example:
+
+JavaScript
+
+```
+greet("Alice"); // Output: Hello, Alice!
+let result = square(5); // result will be 25
+
+```
+
+**Key Benefits**
+
+-   **Reusability:** Write code once and use it multiple times, improving code organization and maintainability.
+-   **Abstraction:** Encapsulate complex logic within functions, making your code more modular and easier to understand.
+-   **Flexibility:** Treat functions as values, enabling techniques like callbacks and higher-order functions.
+
+**Illustrative Example**
+
+Let's consider a practical example of a function that calculates the factorial of a number:
+
+JavaScript
+
+```
+function factorial(n) {
+    if (n <= 1) return 1;
+    return n * factorial(n - 1); 
+}
+
+let result = factorial(5); // result will be 120 (5 * 4 * 3 * 2 * 1)
+
+```
+
+This function demonstrates:
+
+-   **Parameterization:** It accepts an input `n`.
+-   **Conditional Logic:** It uses an `if` statement to handle the base case.
+-   **Recursion:** It calls itself to compute the factorial.
+-   **Return Value:** It returns the calculated factorial.
+
+--- 
+
