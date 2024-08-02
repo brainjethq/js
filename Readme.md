@@ -66,6 +66,25 @@ JavaScript is the engine that powers the interactive and dynamic web experiences
 
 ---
 
+# Version
+
+The reference text frequently mentions **ES5, ES6+, and ESNext** in the context of JavaScript language features and their evolution. Let's break down what these terms signify:
+
+-   **ES5 (ECMAScript 5)**: This represents the fifth edition of the ECMAScript standard, released in 2009. It served as the baseline for JavaScript compatibility for many years, introducing features like strict mode, JSON support, and new array methods. The text often uses ES5 as a reference point for backward compatibility, highlighting features that were not available in earlier versions.
+    
+-   **ES6+ (ECMAScript 6 and beyond)**: This encompasses ECMAScript 6 (also known as ES2015) and all subsequent versions released annually (ES2016, ES2017, and so on). ES6 marked a significant turning point for JavaScript, introducing major features like classes, modules, arrow functions, and promises, transforming it into a more robust and modern language. The text frequently notes features that are specific to ES6+ and may not be supported in older environments.
+    
+-   **ESNext:** This term refers to the upcoming or proposed features for future versions of JavaScript that are still under development and not yet standardized. The text occasionally mentions ESNext features to provide insights into the language's future direction and potential enhancements.
+    
+
+In essence, these terms represent different stages in the evolution of the JavaScript language:
+
+-   **ES5**: The established foundation for compatibility.
+-   **ES6+**: The modern era of JavaScript with significant new features and capabilities.
+-   **ESNext**: The cutting edge of JavaScript's development, showcasing potential future additions.
+
+---
+
   
 
 # Hello World Program
