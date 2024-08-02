@@ -980,3 +980,59 @@ let x = 5, y = 0;
 
 --- 
 
+# Switch Statement
+
+The `switch` statement in JavaScript is a control flow mechanism that allows you to select one of several code blocks based on the value of an expression. It's particularly useful when you have multiple possible cases to handle, offering a more structured alternative to a series of `if...else if...else` statements.
+
+**Syntax**
+
+```javascript
+switch (expression) {
+  case value1:
+    // Code to execute if expression === value1
+    break;
+  case value2:
+    // Code to execute if expression === value2
+    break;
+  // ... more cases
+  default:
+    // Code to execute if no case matches
+}
+```
+
+**How it Works**
+
+1.  **Evaluation:** The `expression` within the `switch` parentheses is evaluated once.
+2.  **Comparison:** The resulting value is compared to each `case` value using strict equality (`===`).
+3.  **Execution:** If a match is found, the code block associated with that `case` is executed.
+4.  **Fall-through:** If a `break` statement is encountered, the `switch` statement terminates. Otherwise, execution continues to the next `case`, even if its value doesn't match (this is called "fall-through" and is generally avoided).
+5.  **Default:** If no `case` matches and a `default` label is present, its code block is executed.
+
+**Example**
+
+```javascript
+let day = "Wednesday";
+
+switch (day) {
+  case "Monday":
+    console.log("It's the start of the workweek.");
+    break;
+  case "Wednesday":
+    console.log("Hump day!");
+    break;
+  case "Friday":
+    console.log("Almost the weekend!");
+    break;
+  default:
+    console.log("Just another day.");
+}
+```
+
+**Key Points**
+
+*   The `break` statement is crucial to prevent fall-through behavior.
+*   The `default` case is optional but often used to handle unexpected or unmatched values.
+*   `switch` statements can enhance code readability when dealing with multiple cases based on a single expression.
+*   Be cautious with side effects in `case` expressions, as not all cases are evaluated.
+
+--- 
