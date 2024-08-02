@@ -936,3 +936,47 @@ In summary, understanding the difference between `==` and `===` is crucial for w
 
 --- 
 
+# Boolean Logic
+
+
+A detailed explanation of Boolean logic in JavaScript, focusing on the three primary logical operators:
+
+-   **Logical AND (`&&`)**
+-   **Logical OR (`||`)**
+-   **Logical NOT (`!`)**
+
+These operators are commonly used in conjunction with relational operators (like `==`,  `===`,  `<`,  `>`, etc.) to create complex expressions that evaluate to either `true` or `false`.
+
+### **Logical AND (`&&`)**
+
+-   **Behavior:** The `&&` operator returns a truthy value if and only if both of its operands are truthy. If either operand is falsy, it returns a falsy value.
+-   **Truthy/Falsy Values:** The text reminds us that all JavaScript values are inherently truthy or falsy. Falsy values include `false`,  `null`,  `undefined`,  `0`,  `-0`,  `NaN`, and `""` (the empty string). All other values are truthy.
+-   **Short-circuiting:** The `&&` operator employs short-circuiting. It evaluates its left operand first. If the left operand is falsy, the entire expression is falsy, and the right operand is not evaluated. If the left operand is truthy, the right operand is evaluated, and its value is returned.
+
+### **Logical OR (`||`)**
+
+-   **Behavior:** The `||` operator returns a truthy value if at least one of its operands is truthy. It returns a falsy value only if both operands are falsy.
+-   **Short-circuiting:** The `||` operator also short-circuits. It evaluates its left operand first. If the left operand is truthy, it returns that truthy value without evaluating the right operand. If the left operand is falsy, the right operand is evaluated, and its value is returned.
+
+### **Logical NOT (`!`)**
+
+-   **Behavior:** The `!` operator is a unary operator that inverts the boolean value of its operand. If the operand is truthy, it returns `false`. If the operand is falsy, it returns `true`.
+-   **Explicit Conversion:** Unlike `&&` and `||`, the `!` operator explicitly converts its operand to a boolean value before inverting it.
+
+**Example Usage**
+
+JavaScript
+
+```
+let x = 5, y = 0;
+
+(x > 0) && (y === 0);  // true: both conditions are met
+(x < 3) || (y !== 0);  // false: neither condition is met
+!(x === 5);            // false: x is 5, so the negation is false
+
+```
+
+**Important Note:** Be mindful of potential side effects when using `&&` and `||` with expressions that have side effects (e.g., assignments, function calls) in their right operands, as those side effects may not occur if the left operand determines the overall outcome.
+
+--- 
+
