@@ -1036,3 +1036,54 @@ switch (day) {
 *   Be cautious with side effects in `case` expressions, as not all cases are evaluated.
 
 --- 
+
+# Statements and Expressions
+
+
+The reference text draws a clear distinction between **statements** and **expressions** in JavaScript, highlighting their roles in program structure and execution.
+
+### **Expressions**
+
+-   **Definition:** The text describes expressions as "JavaScript phrases" that can be evaluated to produce a value. They are the fundamental building blocks of computations in JavaScript.
+    
+-   **Examples:**
+    
+    -   Literals (e.g.,  `3.14`,  `"hello"`,  `true`)
+    -   Variable references (e.g.,  `x`,  `count`)
+    -   Arithmetic operations (e.g.,  `x + y`,  `count * 2`)
+    -   Function calls (e.g.,  `Math.max(a, b, c)`)
+    -   Property access (e.g.,  `person.name`,  `data[index]`)
+-   **Key Points:**
+    
+    -   Expressions **produce values**.
+    -   They can also have **side effects**, like assigning a value to a variable.
+    -   Complex expressions are built from simpler ones using operators.
+
+### **Statements**
+
+-   **Definition:** The text likens statements to "JavaScript sentences or commands." They instruct the JavaScript interpreter to perform actions.
+    
+-   **Examples:**
+    
+    -   Variable declarations (e.g.,  `let x;`,  `const PI = 3.14159;`)
+    -   Assignment statements (e.g.,  `x = 10;`,  `person.age = 30;`)
+    -   Function calls (when used for their side effects, not their return value)
+    -   Control structures like `if`,  `switch`,  `for`,  `while`
+-   **Key Points:**
+    
+    -   Statements **execute actions** and may alter the program's state.
+    -   They do not inherently produce a value.
+    -   They are often composed of expressions.
+    -   Control structures use expressions to guide the flow of execution.
+
+### **Core Difference**
+
+The text emphasizes that the primary distinction lies in their purpose:
+
+-   **Expressions** are about **computing values**.
+-   **Statements** are about **making things happen** (performing actions).
+
+Understanding this distinction is crucial for comprehending the structure and execution of JavaScript code.
+
+--- 
+
