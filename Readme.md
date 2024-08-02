@@ -765,3 +765,73 @@ let greeting = `Hello ${ name }.`; // greeting == "Hello Bill."
 
 --- 
 
+# Decisions: if / else Statements
+
+
+The `if/else` statement in JavaScript is the fundamental control structure that allows your code to make decisions and execute different blocks of code based on conditions. The reference text provides a clear explanation of its two forms and how they work.
+
+### **The `if` Statement**
+
+The first form of the `if` statement is:
+
+JavaScript
+
+```
+if (expression)
+    statement;
+
+```
+
+-   **`expression`**: This is evaluated by the JavaScript interpreter.
+-   **`statement`**: This statement is executed only if the `expression` evaluates to a **truthy** value. If the `expression` is **falsy**, the `statement` is skipped.
+
+**Example:**
+
+JavaScript
+
+```
+if (username == null) { // If username is null or undefined
+    username = "John Doe"; // define it
+}
+
+```
+
+### **The `if/else` Statement**
+
+The second form of the `if` statement introduces an `else` clause:
+
+JavaScript
+
+```
+if (expression)
+    statement1;
+else
+    statement2;
+
+```
+
+-   **`expression`**: Evaluated by the interpreter.
+-   **`statement1`**: Executed if the `expression` is **truthy**.
+-   **`statement2`**: Executed if the `expression` is **falsy**.
+
+**Example:**
+
+JavaScript
+
+```
+if (n === 1) {
+    console.log("You have 1 new message.");
+} else {
+    console.log(`You have ${n} new messages.`);
+}
+
+```
+
+**Key Points**
+
+-   Parentheses around the `expression` are mandatory.
+-   You can use curly braces `{}` to group multiple statements into a block, allowing you to execute more than one statement conditionally.
+-   Be cautious with nested `if` statements to ensure that the `else` clause is associated with the correct `if`. Using curly braces helps avoid ambiguity.
+-   The `else if` construct is a common idiom for handling multiple conditions sequentially.
+
+--- 
