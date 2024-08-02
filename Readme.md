@@ -913,3 +913,26 @@ if (0) {
 -   The distinction between truthy and falsy values allows for more expressive and compact code, as you can often omit explicit comparisons in conditional statements.
 
 --- 
+
+# Equality Operators: == vs. ===
+
+The reference text emphasizes the distinction between the **equality operator (`==`)** and the **strict equality operator (`===`)** in JavaScript. The key difference lies in how they handle type conversions when comparing values.
+
+-   **Equality Operator (`==`)**: This operator performs type conversions if the operands are of different types before comparing their values. This can lead to unexpected results due to JavaScript's flexible type coercion rules.
+    
+    -   Example:  `"0" == 0` evaluates to `true` because the string `"0"` is converted to a number before the comparison.
+-   **Strict Equality Operator (`===`)**: This operator checks for both value equality and type equality. It does not perform any type conversions, making it a more predictable and reliable way to compare values.
+    
+    -   Example:  `3 === '3'` evaluates to `false` because the number `3` and the string `'3'` have different types.
+
+**Recommendation:** The reference text strongly advises using the strict equality operator (`===`) in most cases to avoid potential bugs and unexpected behavior caused by implicit type conversions. The equality operator (`==`) is considered a legacy feature and should be used sparingly, if at all.
+
+The text also mentions the corresponding inequality operators:
+
+-   **Non-strict inequality (`!=`)**: The opposite of `==`, allowing type conversions.
+-   **Strict inequality (`!==`)**: The opposite of `===`, requiring both value and type inequality.
+
+In summary, understanding the difference between `==` and `===` is crucial for writing robust JavaScript code. By favoring `===`, you ensure more predictable comparisons and minimize the risk of unexpected outcomes due to type coercion.
+
+--- 
+
