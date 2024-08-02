@@ -1147,3 +1147,37 @@ console.log(message); // Output: You can vote!
 
 --- 
 
+# Strict Mode
+
+The reference text emphasizes the importance of **strict mode** in JavaScript, which is a restricted subset of the language that enhances error checking and security.
+
+### **Opting into Strict Mode**
+
+You can enable strict mode in two ways:
+
+1.  **At the script level:** Include the directive `"use strict"` (within quotes) at the beginning of your JavaScript file or script. This applies strict mode to the entire script.
+2.  **At the function level:** Place the `"use strict"` directive at the start of a function body. This applies strict mode only to that specific function.
+
+### **Benefits of Strict Mode**
+
+Strict mode offers several advantages:
+
+-   **Eliminates Silent Errors:** Many coding mistakes that would silently fail in normal JavaScript will throw explicit errors in strict mode, aiding in debugging and preventing unexpected behavior.
+-   **Fixes Language Deficiencies:** Strict mode addresses some inherent flaws in the early design of JavaScript, making the language more consistent and predictable.
+-   **Improves Security:** It introduces restrictions that can help mitigate certain security vulnerabilities.
+
+### **Key Differences Between Strict and Non-Strict Mode**
+
+The text highlights several key distinctions between strict and non-strict mode:
+
+1.  **`with` Statement:** The `with` statement is prohibited in strict mode.
+2.  **Variable Declarations:** In strict mode, all variables must be declared using `var`,  `let`, or `const`. Assigning a value to an undeclared identifier results in an error.
+3.  **`this` Binding:** In strict mode, the `this` value within functions (not methods) is `undefined`. In non-strict mode, it defaults to the global object.
+4.  **Other Restrictions:** Strict mode also enforces various other restrictions, such as preventing the deletion of undeletable properties, requiring unique property names in object literals, and disallowing the octal numeric literal syntax (e.g.,  `077`).
+
+### **Recommendation**
+
+The reference text strongly recommends using strict mode for all new JavaScript code. It helps you write cleaner, more maintainable code and reduces the likelihood of encountering subtle bugs due to the language's historical quirks.
+
+--- 
+
