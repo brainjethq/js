@@ -722,3 +722,46 @@ In this modified expression, the addition within the parentheses is executed fir
 
 
 > Reference: [MDN Docs 📖](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
+
+--- 
+
+# Strings and Template Literals
+
+A comprehensive overview of strings and template literals in JavaScript.
+
+### Strings
+
+-   **Definition:** The `string` type represents text in JavaScript. It's an immutable ordered sequence of 16-bit values, each typically representing a Unicode character. The length of a string is the number of 16-bit values it contains.
+    
+-   **String Literals:** You create string literals by enclosing characters within single quotes (`'`), double quotes (`"`), or backticks (```).
+    
+    -   Examples:
+        -   `''` (empty string)
+        -   `'testing'`
+        -   `"3.14"`
+        -   `'name="myform"'`
+        -   `"Wouldn't you prefer O'Reilly's book?"`
+-   **Template Literals (ES6 and later):** Template literals, delimited by backticks, offer enhanced string creation capabilities.
+    
+    -   **Expression Interpolation:** Embed JavaScript expressions within the string using `${expression}`. The expression's value is converted to a string and included in the final string.
+    -   **Multi-line Strings:** Template literals can span multiple lines without special escaping.
+    -   **Tagged Templates:** If a function name precedes the opening backtick, the template's text and expression values are passed to that function, and its return value becomes the template literal's value.
+
+### Example: Template Literal
+
+JavaScript
+
+```
+let name = "Bill";
+let greeting = `Hello ${ name }.`; // greeting == "Hello Bill."
+
+```
+
+**Key Points**
+
+-   Strings are immutable: methods like `replace()` and `toUpperCase()` return new strings, not modifying the original.
+-   Strings can be accessed like read-only arrays using square brackets (`s[0]`).
+-   Template literals provide a powerful and flexible way to create and work with strings, especially when incorporating dynamic values or spanning multiple lines.
+
+--- 
+
