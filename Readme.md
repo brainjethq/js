@@ -872,3 +872,44 @@ Understanding type conversion and coercion is crucial for writing reliable JavaS
 
 --- 
 
+# Truthy and Falsy Values
+
+In JavaScript, the concept of **truthy** and **falsy** values is crucial, especially when it comes to conditional statements and expressions that expect a boolean outcome.
+
+-   **Truthy Values:** These are values that, when evaluated in a Boolean context, are considered `true`. In essence, any value that is _not_ falsy is truthy. This includes:
+    
+    -   All objects (including arrays and functions)
+    -   Non-empty strings
+    -   All numbers except `0` and `NaN`
+    -   The boolean value `true`
+-   **Falsy Values:** These are the specific values that are treated as `false` in a Boolean context. These include:
+    
+    -   `false`
+    -   `null`
+    -   `undefined`
+    -   `0`
+    -   `-0`
+    -   `NaN`
+    -   `""` (the empty string)
+
+**Example**
+
+JavaScript
+
+```
+if ("hello") {
+  console.log("This string is truthy!"); 
+}
+
+if (0) {
+  console.log("This will not be printed because 0 is falsy.");
+}
+
+```
+
+**Key Points**
+
+-   Understanding truthy and falsy values is essential for writing concise and effective JavaScript code, particularly when working with conditional logic and expressions that implicitly require boolean evaluations.
+-   The distinction between truthy and falsy values allows for more expressive and compact code, as you can often omit explicit comparisons in conditional statements.
+
+--- 
