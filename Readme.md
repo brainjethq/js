@@ -1789,3 +1789,71 @@ Understanding the behavior of the `this` keyword is crucial, especially when wor
 
 --- 
 
+# Object Methods
+
+  
+  
+
+The reference text explains that in JavaScript, **object methods** are simply functions that are stored as properties of an object. The text emphasizes that the key characteristic of methods is their use of the `this` keyword to refer to the object on which they are invoked, enabling an object-oriented programming style.
+
+  
+
+The text provides the following example to illustrate object methods:
+
+  
+
+JavaScript
+
+  
+
+```
+
+let calculator = { // An object literal
+
+operand1: 1,
+
+operand2: 1,
+
+add() {
+
+// We're using method shorthand syntax for this function
+
+// Note the use of the 'this' keyword to refer to the containing object.
+
+this.result = this.operand1 + this.operand2;
+
+}
+
+};
+
+  
+
+calculator.add(); // A method invocation to compute 1+1.
+
+calculator.result // => 2
+
+  
+
+```
+
+  
+
+In this example:
+
+  
+
+1. An object named `calculator` is created with two data properties (`operand1` and `operand2`) and a method named `add()`.
+
+2. The `add()` method uses the `this` keyword to access the `operand1` and `operand2` properties of the `calculator` object and stores the sum in the `result` property.
+
+3. The `add()` method is invoked using the method invocation syntax (`calculator.add()`), which sets the `this` value within the method to the `calculator` object itself.
+
+4. Finally, accessing `calculator.result` retrieves the computed sum, which is `2`.
+
+  
+
+The text further explains that method invocations can use both dot notation and square bracket notation for property access, and they can also involve more complex property access expressions. It also highlights the importance of methods and the `this` keyword in object-oriented programming, where functions operate on the objects they are associated with.
+
+
+---
+
