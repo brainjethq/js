@@ -1679,3 +1679,113 @@ In summary, the choice between dot notation and bracket notation depends on the 
 
 --- 
 
+# This Keyword
+
+
+The `this` keyword in JavaScript is a special keyword that refers to the **execution context** of the current function. The value of `this` depends on how the function is called. The reference text provides the following examples to illustrate the behavior of the `this` keyword in different scenarios:
+
+1.  **Function Invocation**
+    
+    When a function is called as a regular function, `this` refers to the global object (in non-strict mode) or is `undefined` (in strict mode).
+    
+    JavaScript
+    
+    ```
+    // In non-strict mode
+    function myFunction() {
+      console.log(this); 
+    }
+    
+    myFunction(); // Output: Window object (or the global object)
+    
+    ```
+    
+    JavaScript
+    
+    ```
+    // In strict mode
+    "use strict";
+    function myFunction() {
+      console.log(this); 
+    }
+    
+    myFunction(); // Output: undefined
+    
+    ```
+    
+2.  **Method Invocation**
+    
+    When a function is called as a method of an object, `this` refers to the object the method is called on.
+    
+    JavaScript
+    
+    ```
+    const myObject = {
+      name: "John",
+      greet: function() {
+        console.log("Hello, my name is " + this.name);
+      }
+    };
+    
+    myObject.greet(); // Output: Hello, my name is John
+    
+    ```
+    
+3.  **Constructor Invocation**
+    
+    When a function is called with the `new` keyword, `this` refers to the newly created object.
+    
+    JavaScript
+    
+    ```
+    function Car(brand) {
+      this.brand = brand;
+    }
+    
+    const myCar = new Car("Ford");
+    console.log(myCar.brand); // Output: Ford
+    
+    ```
+    
+4.  **Indirect Invocation**
+    
+    The `call()` and `apply()` methods allow you to explicitly set the value of `this` when calling a function.
+    
+
+function sayHello() { console.log("Hello, " + this.name); }
+
+```
+const person1 = { name: "Alice" };
+const person2 = { name: "Bob" };
+
+sayHello.call(person1); // Output: Hello, Alice
+sayHello.apply(person2); // Output: Hello, Bob   
+```
+
+```
+
+5.  **Arrow Functions**
+    
+    Arrow functions do not have their own `this` binding. They inherit the `this` value from the enclosing lexical scope.
+    
+    JavaScript
+    
+    ```
+    const myObject = {
+      name: "John",
+      greet: () => {
+        console.log("Hello, my name is " + this.name);
+      }
+    };
+    
+    myObject.greet(); // Output: Hello, my name is undefined (or the global object in non-strict mode)
+    
+    ```
+    
+
+In the last example, the arrow function `greet` inherits the `this` value from its surrounding context, which is the global object or `undefined` depending on whether strict mode is enabled. Since the global object or `undefined` does not have a `name` property, the output is `undefined` or the global object in non-strict mode.
+
+Understanding the behavior of the `this` keyword is crucial, especially when working with object-oriented programming and callbacks, as it determines the context in which your code operates.
+
+--- 
+
