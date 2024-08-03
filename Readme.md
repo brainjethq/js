@@ -1750,19 +1750,18 @@ The `this` keyword in JavaScript is a special keyword that refers to the **execu
 4.  **Indirect Invocation**
     
     The `call()` and `apply()` methods allow you to explicitly set the value of `this` when calling a function.
+
+    JavaScript
     
+    ```
+    function sayHello() { console.log("Hello, " + this.name); }
+    const person1 = { name: "Alice" };
+    const person2 = { name: "Bob" };
 
-function sayHello() { console.log("Hello, " + this.name); }
-
-```
-const person1 = { name: "Alice" };
-const person2 = { name: "Bob" };
-
-sayHello.call(person1); // Output: Hello, Alice
-sayHello.apply(person2); // Output: Hello, Bob   
-```
-
-```
+    sayHello.call(person1); // Output: Hello, Alice
+    sayHello.apply(person2); // Output: Hello, Bob  
+     
+    ```
 
 5.  **Arrow Functions**
     
@@ -1791,8 +1790,6 @@ Understanding the behavior of the `this` keyword is crucial, especially when wor
 
 # Object Methods
 
-  
-  
 
 The reference text explains that in JavaScript, **object methods** are simply functions that are stored as properties of an object. The text emphasizes that the key characteristic of methods is their use of the `this` keyword to refer to the object on which they are invoked, enabling an object-oriented programming style.
 
@@ -1856,4 +1853,3 @@ The text further explains that method invocations can use both dot notation and 
 
 
 ---
-
