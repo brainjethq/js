@@ -2183,8 +2183,7 @@ By effectively utilizing the `console` API and breakpoints, you can gain valuabl
 ![Alt text](https://kroki.io/mermaid/svg/eNp90bEOgjAQBuDdp-jkZnwAjIlAFRHURAYTwlChKY2FIh6Db69eTao12qFD8_3X5D_Rs64mWTgij7PIQ10ODW-hIJPJnPg5TWhKt9ns1E_nYwVeDY0aC_AK9D6q4FtxVrkq_FInXd2switASt8oSpCguKUU1TLP6NGQy6DBW5CDbDrFyZ4Jbp6KEfoQ_cqdeuUlSN3aucZFfx3CFcK1Czs7yoj4h0ASIdm4RDbiDa0RJS5i9icjUqeMpeyv8GiiZ-K54I86YkxsncSBl7qtfkQSjOyciJLt-cXujcOkng)
 <img src="https://kroki.io/mermaid/svg/eNp90bEOgjAQBuDdp-jkZnwAjIlAFRHURAYTwlChKY2FIh6Db69eTao12qFD8_3X5D_Rs64mWTgij7PIQ10ODW-hIJPJnPg5TWhKt9ns1E_nYwVeDY0aC_AK9D6q4FtxVrkq_FInXd2switASt8oSpCguKUU1TLP6NGQy6DBW5CDbDrFyZ4Jbp6KEfoQ_cqdeuUlSN3aucZFfx3CFcK1Czs7yoj4h0ASIdm4RDbiDa0RJS5i9icjUqeMpeyv8GiiZ-K54I86YkxsncSBl7qtfkQSjOyciJLt-cXujcOkng">
 
-<!---
-
+```
 graph TD
     A[Document] --> B[ELEMENT<br/>&lt;html&gt;]
     B --> C[ELEMENT<br/>&lt;head&gt;]
@@ -2207,5 +2206,4 @@ graph TD
     J --> N[TEXT<br>&quot;Second Paragraph&quot;]
 
     L --> O[TEXT<br>&quot;link&quot;]
-
---->
+```
