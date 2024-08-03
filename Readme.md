@@ -2109,3 +2109,19 @@ In this example:
 
 --- 
 
+# Debugging (Fixing Errors)
+
+The reference text doesn't have a dedicated section solely on the topic of debugging in JavaScript. However, it does offer valuable insights and techniques that contribute to effective debugging practices throughout the discussion of various language features and concepts.
+
+**Key takeaways related to debugging:**
+
+1.  **Strict Mode:** The text strongly advocates for using strict mode, which enforces stricter rules and helps catch potential errors early on by generating explicit exceptions for common coding mistakes that might otherwise go unnoticed.
+2.  **Error Classes:** The reference text details the `Error` class and its subclasses, which are instrumental in handling and reporting errors in JavaScript programs. It also encourages defining custom error subclasses to encapsulate specific error conditions in your applications.
+3.  **Console API:** The `console` object and its methods, such as `console.log()`,  `console.warn()`, and `console.error()`, are presented as valuable tools for logging messages and debugging information during development.
+4.  **Event Handling and Callbacks:** The text discusses the asynchronous nature of JavaScript, particularly in web browsers and Node.js environments. It emphasizes the importance of proper error handling in asynchronous code using techniques like Promises and `try...catch` blocks to prevent unhandled exceptions and ensure robust error management.
+5.  **Linting and Testing:** The final chapter introduces tools like ESLint and Jest, which can aid in identifying potential errors and inconsistencies in your code, further contributing to the debugging process.
+
+While the reference text doesn't explicitly outline a step-by-step debugging guide, the concepts and techniques it presents throughout the discussion of various language features and APIs collectively provide a solid foundation for effective debugging practices in JavaScript. By understanding the importance of strict mode, utilizing error handling mechanisms, leveraging the console API for logging, and adopting tools like linters and testing frameworks, you can significantly enhance your ability to identify and resolve issues in your JavaScript code.
+
+--- 
+
