@@ -2186,9 +2186,9 @@ By effectively utilizing the `console` API and breakpoints, you can gain valuabl
 
 ```
 graph TD
-    A[Document] --> B[ELEMENT<br/>&lt;html&gt;]
-    B --> C[ELEMENT<br/>&lt;head&gt;]
-    B --> D[ELEMENT<br/>&lt;body&gt;]
+    A[Document] --> B[ELEMENT<br>&lt;html&gt;]
+    B --> C[ELEMENT<br>&lt;head&gt;]
+    B --> D[ELEMENT<br>&lt;body&gt;]
     
     C --> E[ELEMENT<br>&lt;title&gt;]
     E --> F[TEXT<br>&quot;A Simple Page&quot;]
