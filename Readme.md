@@ -2063,3 +2063,49 @@ In this example, the outer `for` loop iterates over the rows of the `table`, whi
 -   **Clarity and Efficiency:** Choose the appropriate looping technique based on your specific requirements, considering both code readability and performance implications.
 
 Remember that these are just basic examples. The reference text also explores more advanced scenarios, such as using nested loops with `break` and `continue` statements and leveraging iterators and generators for more sophisticated iteration patterns.
+
+--- 
+
+
+# While Loop
+
+The `while` loop in JavaScript is a fundamental control structure that repeatedly executes a block of code as long as a specified condition remains true. The reference text highlights that it's considered the basic loop in JavaScript, often used when the exact number of iterations is unknown beforehand.
+
+**Syntax**
+
+```javascript
+while (condition) {
+  // Code to be executed repeatedly
+}
+```
+
+*   **`condition`**: This expression is evaluated before each iteration. If it's truthy, the loop body executes; otherwise, the loop terminates.
+
+**Example**
+
+```javascript
+let count = 0;
+while (count < 10) {
+  console.log(count);
+  count++;
+}
+```
+
+In this example:
+
+1.  The variable `count` is initialized to 0.
+2.  The condition `count < 10` is checked. Since `count` is 0, the condition is true, and the loop body executes.
+3.  The `console.log(count)` statement prints the current value of `count` (0).
+4.  The `count++` statement increments `count` by 1.
+5.  Steps 2-4 are repeated until the condition `count < 10` becomes false (when `count` reaches 10).
+6.  The loop terminates, and the program continues executing the code after the loop.
+
+**Key Points**
+
+*   The `while` loop is suitable when you don't know the exact number of iterations in advance.
+*   The loop condition is checked at the beginning of each iteration.
+*   Ensure that the loop condition eventually becomes false to avoid infinite loops.
+*   The loop body can contain any valid JavaScript statements, including other loops (nested loops).
+
+--- 
+
